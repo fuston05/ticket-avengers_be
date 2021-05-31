@@ -1,0 +1,37 @@
+{
+    "name": "Yelp_API_CAller",
+    "version": "1.0.0",
+    "description": "Used to hit the Yelp API",
+    "main": "index.js",
+    "jest": {
+        "testEnvironment": "node"
+    },
+    "scripts": {
+        "start": "node index.js",
+        "server": "cross-env NODE_ENV=development nodemon index.js",
+        "test": "cross-env NODE_ENV=testing jest --watch --verbose"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fuston05/ticket-avengers_be"
+    },
+    "author": "Scott Fuston",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/fuston05/ticket-avengers_be/issues"
+    },
+    "homepage": "https://github.com/fuston05/ticket-avengers_be#readme",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "helmet": "^4.2.0",
+        "jsonwebtoken": "^8.5.1",
+        "knex": "^0.21.12"
+    },
+    "devDependencies": {
+        "cross-env": "^7.0.3",
+        "nodemon": "^2.0.6"
+    }
+}

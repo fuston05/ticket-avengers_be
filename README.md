@@ -1,2 +1,1 @@
-# ticket-avengers_be
-temporary server for Ticket Avengers so that I can make an api call to yelp
+temporary BE for Ticket Avengers so i can hit the yelp api
