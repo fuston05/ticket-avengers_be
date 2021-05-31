@@ -1,19 +1,16 @@
 // *** User router ***
 const express = require("express");
 const router = express.Router();
-const axios = require("axios");
+
+// model
+const {getAll} = require("../models/yelp-model");
 
 //  -if logged in
 router.get("/", (req, res, next) => {
     const term = req.query.term;
     const location = req.query.location;
 
-    axios
-        .get(`${process.env.BASE_URL}?term=${term}&location=${location}`, {
-            headers: {
-                Authorization: `Bearer ${process.env.API_KEY}`,
-            },
-        })
+    getAll(term, location)
         .then((data) => {
             res.status(200).json(data.data);
         })
