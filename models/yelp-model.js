@@ -11,6 +11,24 @@ const getAll = (term, location) => {
     );
 };
 
+const getById = (id) => {
+    return axios.get(`${process.env.BY_ID_URL}/${id}`, {
+        headers: {
+            Authorization: `Bearer ${process.env.API_KEY}`,
+        },
+    });
+};
+
+const getReviewById = (id) => {
+    return axios.get(`${process.env.BY_ID_URL}/${id}/reviews`, {
+        headers: {
+            Authorization: `Bearer ${process.env.API_KEY}`,
+        },
+    });
+};
+
 module.exports = {
     getAll,
+    getById,
+    getReviewById,
 };
